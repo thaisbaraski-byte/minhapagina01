@@ -1,131 +1,519 @@
-*{
+=
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Poppins, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fbff;
+    color: #252525;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
     background-color: #53d2f8;
-    color: rgb(255, 255, 255);
-    padding: 20px;
+    color: #ffffff;
+    padding: 20px 6%;
 }
 
-.cabecalho-itens{
+.cabecalho-itens {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
 }
 
-.cabecalho_imagem{
-    width: 200px;
+.cabecalho_imagem {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #ffffff;
 }
 
-.titulo_site{
+.titulo_site {
+    font-size: 42px;
+    font-weight: 700;
     text-align: center;
-    font-size: 40px;
+    letter-spacing: 1px;
 }
 
-.sociais{
+
+/* ==========================================
+   REDES SOCIAIS
+========================================== */
+
+.sociais {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
 }
 
-.sociais img{
-    width: 50px;
+.sociais img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    transition: transform 0.3s ease;
 }
+
+.sociais img:hover {
+    transform: scale(1.12);
+}
+
+
+/* ==========================================
+   BANNER PRINCIPAL
+========================================== */
 
 .banner1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
+    padding: 45px 20px 65px;
+    background-color: #ffffff;
 }
 
 .escola-image {
+    display: block;
     width: 60%;
-    display: flex;
-    max-width: 100%;
+    max-width: 1000px;
+    height: auto;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 .txtbanner {
-    margin-top: 20px;
     display: flex;
     font-size: 40px;
     text-align: center;
     margin-top: 50px;
 }
 
-.titulo-sobre{
-    display: flex;  
+
+/* ==========================================
+   SOBRE MIM
+========================================== */
+
+.titulo-sobre {
     font-size: 45px;
-    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #222222;
+
+    margin-top: 40px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-.sobre-mim{
+.sobre-mim {
     max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    font-size: 25px;
-    line-height: 1.8;
-    color: #333;
+    margin: 10px auto 0;
     padding: 0 20px;
-    margin-top: 10px;
-}
 
-.estudante{
-    background-color: #1900ff;
-    padding: 40px 20px;
-}
-
-.estudante_titulo{
+    font-size: 23px;
+    line-height: 1.8;
     text-align: center;
+
+    color: #444444;
+}
+
+.sobre-mim strong {
+    color: #139ec8;
+}
+
+
+/* ==========================================
+   MÚSICA E VÍDEO
+========================================== */
+
+.musica {
+    width: 100%;
+    max-width: 850px;
+    margin-top: 55px;
+
+    text-align: center;
+}
+
+.musica-titulo {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+    border-radius: 16px;
+
+    background-color: #000000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ==========================================
+   MEU BAIRRO
+========================================== */
+
+.Meu-Bairro {
+    padding: 65px 20px;
+    text-align: center;
+
+    background-color: #edf8ff;
+}
+
+.txtbairro {
+    font-size: 40px;
+    font-weight: 700;
+
     margin-bottom: 30px;
 }
 
-.estudantes_todos{
+.mapa-container {
+    width: 100%;
+    max-width: 850px;
+    height: 450px;
+
+    margin: 0 auto;
+    overflow: hidden;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ==========================================
+   AMIGOS
+========================================== */
+
+.estudante {
+    background-color: #1900ff;
+    padding: 65px 20px;
+    color: #ffffff;
+}
+
+.estudante_titulo {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+}
+
+.estudantes_todos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
 
-.estudante-div{
+.estudante-div {
+    width: 210px;
+    padding: 25px 20px;
+
     text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
 }
 
-.estudante-imagem{
+.estudante-div:hover {
+    transform: translateY(-6px);
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.estudante-imagem {
     width: 150px;
-    border-radius: 10px;
+    height: 150px;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    border: 3px solid #ffffff;
 }
 
-.estudante-nome{
-    margin: 10px 0;
+.estudante-nome {
+    font-size: 20px;
+    font-weight: 600;
+
+    margin: 15px 0 0;
 }
 
-.estudante-icone{
+.estudante-icone {
     width: 35px;
     margin: 5px;
 }
 
-.escola{
-    background: linear-gradient(#ffffff,#001aff);
-    color: white;
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.escola {
+    background: linear-gradient(#ffffff, #001aff);
+    color: #ffffff;
+
     text-align: center;
-    padding: 30px;
+    padding: 75px 20px 40px;
 }
 
-.logo_rodape{
+.logo_rodape {
+    width: 80px;
     height: 80px;
-    margin-bottom: 15px;
 
+    object-fit: cover;
+    border-radius: 50%;
 
-.link{
-    color: white;
+    margin-bottom: 20px;
+}
+
+.escola-titulo {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.escola-titulo strong {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.link {
+    color: #ffffff;
     text-decoration: none;
 }
+
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho_imagem {
+        width: 120px;
+        height: 100px;
+    }
+
+    .titulo_site {
+        font-size: 35px;
+    }
+
+    .escola-image {
+        width: 85%;
+    }
+
+    .sobre-mim {
+        font-size: 21px;
+    }
+
+    .musica {
+        max-width: 700px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .cabecalho-itens {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cabecalho_imagem {
+        width: 115px;
+        height: 115px;
+    }
+
+    .titulo_site {
+        font-size: 34px;
+    }
+
+    .sociais {
+        gap: 18px;
+    }
+
+    .sociais img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .banner1 {
+        padding: 25px 15px 45px;
+    }
+
+    .escola-image {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .titulo-sobre {
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+    .sobre-mim {
+        font-size: 17px;
+        line-height: 1.7;
+        padding: 0 10px;
+    }
+
+    .musica {
+        margin-top: 40px;
+    }
+
+    .musica-titulo {
+        font-size: 21px;
+    }
+
+    .video-container {
+        border-radius: 12px;
+    }
+
+    .Meu-Bairro {
+        padding: 45px 15px;
+    }
+
+    .txtbairro {
+        font-size: 32px;
+    }
+
+    .mapa-container {
+        height: 330px;
+        border-radius: 12px;
+    }
+
+    .estudante {
+        padding: 45px 15px;
+    }
+
+    .estudante_titulo {
+        font-size: 32px;
+    }
+
+    .estudantes_todos {
+        gap: 20px;
+    }
+
+    .estudante-div {
+        width: 170px;
+        padding: 20px 10px;
+    }
+
+    .estudante-imagem {
+        width: 125px;
+        height: 125px;
+    }
+
+    .estudante-nome {
+        font-size: 18px;
+    }
+
+    .escola {
+        padding: 65px 15px 35px;
+    }
+
+    .escola-titulo {
+        font-size: 17px;
+    }
+
+    .escola-titulo strong {
+        font-size: 21px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .estudante-div {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .sobre-mim {
+        font-size: 16px;
+    }
+
+    .musica-titulo {
+        font-size: 19px;
+    }
+
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .sociais img,
+    .estudante-div {
+        transition: none;
+    }
+
+}
+
